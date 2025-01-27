@@ -1,0 +1,11 @@
+{
+  "name": "videotube",
+  "version": "1.0.0",
+  "description": "A backend project to save videos",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sanal Roy",
+  "license": "ISC"
+}
