@@ -23,14 +23,7 @@ A RESTful backend API for **Clipvault**, a platform that allows users to registe
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/videoTube-backend.git
-   ```
-
-## Setup:
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/videoTube-backend.git
+   git clone https://github.com/ROYSANAL/Clipvault.git
    ```
 2. Install Dependencies.
    `npm install`
