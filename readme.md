@@ -1,6 +1,6 @@
-# VideoTube Backend
+# Clipvault
 
-A RESTful backend API for **VideoTube**, a platform that allows users to register, log in, and save videos, similar to YouTube. This project provides user authentication and video management features, built with **Node.js**, **Express**, and **MongoDB**.
+A RESTful backend API for **Clipvault**, a platform that allows users to register, log in, and save videos, similar to YouTube. This project provides user authentication and video management features, built with **Node.js**, **Express**, and **MongoDB**.
 
 ## Key Features:
 - **User Registration**: Users can create an account to access the platform.
