@@ -2,19 +2,16 @@ import mongoose from "mongoose";
 import { DB_NAME } from "./constants.js";
 import connectDB from "./db/index.js";
 import dotenv from "dotenv";
-import express from "express";
-
-const app = express();
+import { app } from "./app.js";
 
 dotenv.config({
-  path: "./env",
+  path: "./.env",
 });
 
 //NOTE: 2nd Approach
 connectDB()
   .then(() => {
-
-    NOTE://ERROR k liye listen karo, before starting the server, app.on() means on error kya krna hai?!
+    //ERROR k liye listen karo, before starting the server, app.on() means on error kya krna hai?!
     app.on("error", (error) => {
       console.log("ERROR", error);
       throw error;
