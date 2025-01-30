@@ -51,10 +51,8 @@ const userSchema = new Schema(
   }
 );
 
-
 //NOTE: mongoose also provides middlewares, pre means kuch krne se just pehle, here it means save krne se just pehle
 userSchema.pre("save", async function (next) {
-
   //NOTE: if password is not modified to next flag return krdo! Control will not move further then
   if (!this.isModified("password")) return next();
 
