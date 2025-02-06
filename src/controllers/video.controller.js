@@ -6,12 +6,6 @@ import { ApiResponse } from "../utils/ApiResponse.js";
 import { asyncHandler } from "../utils/asyncHandler.js";
 import { uploadVideoOnCloudinary } from "../utils/cloudinary.js";
 
-// const getAllVideos = asyncHandler(async (req, res) => {
-//   const { page = 1, limit = 10, query, sortBy, sortType, userId } = req.query;
-//   //TODO: get all videos based on query, sort, pagination
-
-// });
-
 const getAllVideos = asyncHandler(async (req, res) => {
   const {
     page = 1,

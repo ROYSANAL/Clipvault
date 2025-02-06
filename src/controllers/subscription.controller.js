@@ -5,7 +5,6 @@ import { ApiError } from "../utils/ApiError.js";
 import { ApiResponse } from "../utils/ApiResponse.js";
 import { asyncHandler } from "../utils/asyncHandler.js";
 
-// const toggleSubscription = asyncHandler(async (req, res) => {
 //   const { channelId } = req.params;
 //   // TODO: toggle subscription
 //   const userId = req.user?._id;
@@ -85,59 +84,6 @@ const toggleSubscription = asyncHandler(async (req, res) => {
     .status(200)
     .json(new ApiResponse(200, { subscribed: !existingSubscription }, message));
 });
-
-// controller to return subscriber list of a channel
-// const getUserChannelSubscribers = asyncHandler(async (req, res) => {
-//   const { channelId } = req.params;
-
-//   // Validate channelId
-//   if (!isValidObjectId(channelId)) {
-//     throw new ApiError(400, "Invalid Channel ID");
-//   }
-//   let message;
-
-//   const userChannelSubscribersWithDetails = await Subscription.aggregate([
-//     {
-//       $match: {
-//         channel: channelId,
-//       },
-//     },
-//     {
-//       $lookup: {
-//         from: "users",
-//         localField: "subscriber",
-//         foreignField: "_id",
-//         as: "SubscriberDetails",
-//         pipeline: [
-//           {
-//             $project: {
-//               fullName: 1,
-//               username: 1,
-//               avatar: 1,
-//               email: 1,
-//             },
-//           },
-//         ],
-//       },
-//     },
-//     {
-//       $project: {
-//         channel: 1,
-//         SubscriberDetails: 1,
-//       },
-//     },
-//   ]);
-
-//   if (userChannelSubscribersWithDetails.length === 0) {
-//     message = "Channel has zero Subscribers";
-//   } else {
-//     message = "Channel's Subscribers fetched Successfully";
-//   }
-
-//   return res
-//     .status(200)
-//     .json(new ApiResponse(200, userChannelSubscribersWithDetails, message));
-// });
 
 const getUserChannelSubscribers = asyncHandler(async (req, res) => {
   const { channelId } = req.params;
